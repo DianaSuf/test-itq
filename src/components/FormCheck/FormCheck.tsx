@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import styles from './App.module.css'
+import styles from './FormCheck.module.css'
 
 interface FormData {
   name: string;
@@ -26,8 +26,7 @@ const validationSchema = Yup.object({
     .required("Введите email"),
 });
 
-export default function App() {
-
+export default function FormComponent() {
   return (
     <main>
       <Formik
@@ -35,13 +34,12 @@ export default function App() {
         validationSchema={validationSchema}
         validateOnBlur={false}
         validateOnChange={false}
-        className={styles.form}
         onSubmit={(values) => {
           alert(`Имя: ${values.name}\nВозраст: ${values.age}\nEmail: ${values.email}`);
         }}
       >
         {({ errors, touched, setFieldError, setFieldValue }) => (
-          <Form className="space-y-4">
+          <Form>
             <div className={styles.formGroup}>
               <label>Имя:</label>
               <Field
