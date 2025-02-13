@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7px;
+  gap: 5px;
+}
+
+.errorBorder {
+  border-color: red;
+}
+
+.errorText {
+  color: red;
+}
+
+.buttonCheck {
+  margin-top: 7px;
+}
